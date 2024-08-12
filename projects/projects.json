@@ -2,21 +2,22 @@
   {
     "name": "Online Banking System",
     "desc": "Built a secure online banking system with PHP and SQL, allowing users to manage accounts, transfer funds, pay bills, and track transactions in real-time",
-    "image": "banking",
+    "image": "assets/images/projects/banking.png",
     "category": "",
     "links": {
       "view": "",
       "code": ""
     }
-  },
+  },  
   {
     "name": "RentHarmony",
     "desc": "Created a landlord management application using PHP and SQL, enabling property owners to manage properties, track tenant payments, and handle maintenance requests efficiently.",
-    "image": "RentHarmony",
+    "image": "assets/images/projects/RentHarmony.png",
     "category": "",
     "links": {
       "view": "",
       "code": "https://github.com/Deadcoder001/RentHarmony.git"
     }
   }
+  
 ]
