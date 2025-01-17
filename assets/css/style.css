@@ -758,14 +758,12 @@ header .navbar ul li a:hover {
   transform: translateX(5px);
 }
 /* work section ends */
-
+/* Timeline Section with Three Experiences */
 .experience .timeline {
   position: relative;
-  max-width: 1100px; /* This is the horizontal length */
+  max-width: 1100px;
   margin: auto;
-  height: 100%; /* Set to 100% of the parent's height */
-  /* or specify a specific height */
-  height: 450px; /* This will make the timeline 800px tall */
+  padding-top: 3rem;
 }
 
 .experience .timeline::after {
@@ -777,39 +775,45 @@ header .navbar ul li a:hover {
   bottom: 0;
   left: 50%;
   margin-left: -3px;
-  z-index: -2;
+  z-index: -1;
 }
+
 .experience .container {
   padding: 10px 40px;
   position: relative;
   background-color: inherit;
   width: 50%;
 }
-/*circles on timeline*/
+
+/* Circle on the timeline */
 .experience .container::after {
   content: "\f0b1";
   position: absolute;
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   border: 4px solid #ff9f55;
   top: 15px;
   border-radius: 50%;
-  z-index: 100;
-  font-size: 1.89rem;
+  z-index: 1;
+  font-size: 1.8rem;
   text-align: center;
   font-weight: 600;
   color: #02094b;
   font-family: "Font Awesome\ 5 Free";
 }
+
+/* Position containers for left and right alignment */
 .experience .left {
   left: 0;
 }
+
 .experience .right {
   left: 50%;
 }
-/* arrows pointing right */
+
+/* Arrows */
 .experience .left::before {
   content: " ";
   height: 0;
@@ -822,7 +826,7 @@ header .navbar ul li a:hover {
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent #f68c09;
 }
-/* arrows pointing left  */
+
 .experience .right::before {
   content: " ";
   height: 0;
@@ -835,205 +839,94 @@ header .navbar ul li a:hover {
   border-width: 10px 10px 10px 0;
   border-color: transparent #f68c09 transparent transparent;
 }
+
 .experience .right::after {
   left: -16px;
 }
+
+/* Content styles */
 .experience .content {
   background-color: #f68c09;
   position: relative;
   border-radius: 6px;
+  padding: 1.5rem;
 }
+
 .experience .content .tag {
-  font-size: 1.3rem;
-  padding-top: 1.5rem;
-  padding-left: 1.5rem;
-}
-.experience .content .desc {
-  margin-left: 1.5rem;
-  padding-bottom: 1rem;
-}
-.experience .content .desc h3 {
   font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+
+.experience .content .desc h3 {
+  font-size: 1.8rem;
   font-weight: 600;
+  margin-bottom: 0.5rem;
 }
+
 .experience .content .desc p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
 }
-/* Media queries - Responsive timeline on screens less than 600px wide */
+
+/* Adjust for three experiences */
+.experience .container:nth-child(odd) {
+  left: 0;
+}
+
+.experience .container:nth-child(even) {
+  left: 50%;
+}
+
+.experience .container:nth-child(odd) .content {
+  text-align: left;
+}
+
+.experience .container:nth-child(even) .content {
+  text-align: right;
+}
+
+/* Responsive Timeline for Mobile */
 @media screen and (max-width: 600px) {
-  .experience {
-    min-height: 80vh;
-  }
-  .experience .timeline {
-    margin-top: 2rem;
-  }
   .experience .timeline::after {
     left: 31px;
   }
+
   .experience .container {
     width: 100%;
     padding-left: 8rem;
     padding-right: 2rem;
   }
+
   .experience .container::after {
     font-size: 2.2rem;
+    left: 25px;
+    top: 15px;
   }
-  .experience .container::before {
+
+  .experience .left,
+  .experience .right {
+    left: 0;
+  }
+
+  .experience .left::before,
+  .experience .right::before {
     left: 61px;
-    border: medium solid #f68c09;
     border-width: 10px 10px 10px 0;
     border-color: transparent #f68c09 transparent transparent;
   }
-  .experience .left::after {
-    left: 15px;
-  }
+
+  .experience .left::after,
   .experience .right::after {
     left: 15px;
   }
-  .experience .right {
-    left: 0%;
-  }
-  .morebtn {
-    margin-top: 3rem;
-  }
-}
-/* experience media queries ends */
-/* experience section ends */
 
-/* contact section starts */
-.contact {
-  background: #e5ecfb;
-  min-height: 40vh;
+  .experience .content {
+    text-align: left;
+    padding: 1.5rem;
+  }
 }
-.contact .container {
-  max-width: 1050px;
-  width: 100%;
-  background: #fff;
-  border-radius: 1.5rem;
-  margin: 2rem 5rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-}
-.contact .container .content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2.5rem 2rem;
-}
-.contact .content .image-box {
-  max-width: 60%;
-  margin-left: 4rem;
-}
-.contact .content .image-box img {
-  width: 100%;
-  height: 40rem;
-  position: relative;
-}
-.contact .content form {
-  width: 45%;
-  margin-right: 3.5rem;
-}
-form .form-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.form-group .field {
-  height: 50px;
-  display: flex;
-  position: relative;
-  margin: 1rem;
-  width: 100%;
-}
-form i {
-  position: absolute;
-  top: 50%;
-  left: 18px;
-  color: rgb(51, 51, 51);
-  font-size: 17px;
-  pointer-events: none;
-  transform: translateY(-50%);
-}
-form .field input,
-form .message textarea {
-  width: 100%;
-  height: 100%;
-  outline: none;
-  padding: 0 16px 0 48px;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-  border-radius: 5px;
-  border: 1px solid rgb(51, 51, 51);
-  background: #e5ecfb;
-}
-.field input::placeholder,
-.message textarea::placeholder {
-  color: rgb(51, 51, 51);
-}
-.field input:focus,
-.message textarea:focus {
-  padding-left: 47px;
-  border: 2px solid rgb(115, 3, 167);
-}
-.field input:focus ~ i,
-.message textarea:focus ~ i {
-  color: rgb(115, 3, 167);
-}
-form .message {
-  position: relative;
-  margin: 1rem;
-  width: 100%;
-}
-form .message i {
-  top: 25px;
-  font-size: 20px;
-  left: 15px;
-}
-form .message textarea {
-  min-height: 130px;
-  max-height: 230px;
-  max-width: 100%;
-  min-width: 100%;
-  padding: 12px 20px 0 48px;
-}
-form .message textarea::-webkit-scrollbar {
-  width: 0px;
-}
-form .button-area {
-  display: flex;
-  float: right;
-  flex-direction: row-reverse;
-}
-.button-area button {
-  color: #fff;
-  border: none;
-  outline: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 13px 25px;
-  background: #2506ad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
-  transition: 0.3s ease;
-  font-family: "Nunito", sans-serif;
-}
-.button-area button:hover {
-  background: #421cecf5;
-}
-.button-area span {
-  font-size: 17px;
-  padding: 1rem;
-  display: none;
-}
-.button-area button i {
-  position: relative;
-  top: 6px;
-  left: 2px;
-  font-size: 1.5rem;
-  transition: 0.3s;
-  color: #fff;
-}
-.button-area button:hover i {
-  left: 8px;
+
 }
 /* contact section media queries starts */
 @media (max-width: 900px) {
