@@ -54,10 +54,7 @@
         "name": "MySQL",
         "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
     },
-    {
-        "name": "PostgreSQL",
-        "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
-    },
+
     {
         "name": "AWS",
         "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
@@ -67,10 +64,7 @@
         "name": "GitHub",
         "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
     },
-    {
-        "name": "Canva",
-        "icon": "https://img.icons8.com/?size=48&id=iWw83PVcBpLw&format=png&color=000000"
-    },
+
     {
         "name": "Adobe Illustrator",
         "icon": "https://img.icons8.com/?size=48&id=13631&format=png&color=000000"
